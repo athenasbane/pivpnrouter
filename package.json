@@ -1,0 +1,20 @@
+{
+  "name": "athenasvpn",
+  "version": "0.1.0",
+  "author": "your name",
+  "description": "My Electron app",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "package": "electron-packager . athenasvpn --overwrite --asar=true --platform=linux --arch=armv7l --icon=icon.png --prune=true --out=release-builds",
+    "create-debian-installer": "electron-installer-debian --src /home/pi/athenasvpnpi/release-builds/athenasvpn-linux-armv7l --arch armv7l --config debian.json"
+  },
+  "dependencies": {
+    "electron": "^11.1.1",
+    "jquery": "^3.5.1"
+  },
+  "devDependencies": {
+    "electron-packager": "^15.2.0",
+    "electron-reload": "^1.5.0"
+  }
+}

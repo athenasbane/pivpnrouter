@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Athena VPN</title>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+    <link rel="stylesheet" type="text/css" href="./font-awesome-4.7.0/css/font-awesome.css" /> 
+</head>
+<body class="background">
+    <script src="./app.js"></script>
+    <div>
+        <div class="power">
+            <button id="powerbutton" class="powerbutton" onclick="modal()"><i class="fa fa-power-off fa-2x icon" aria-hidden="true"></i></button>
+        </div>
+        <div id="modal" class="closed">
+            <div>
+                <button class="onoffbtn" onclick="restart()">Restart</button>
+            </div>
+            <div>
+                <button class="onoffbtn" onclick="shutdown()">Shutdown</button>
+            </div>
+            <div>
+                <button class="onoffbtn" id="closeApp" onclick="closeApp()">Close App</button>
+            </div>
+            <div class="modalbackground" onclick="modalBackground()"></div>
+        </div>
+        <div class="container">
+            <div class="box1">
+                <h1>Connected</h1>
+                <h1 class="header">Devices</h1>
+                <h1 id="connected-clients">0</h1>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
